@@ -1,38 +1,84 @@
-.teste {
-  color: #00ff15;
+.blue {
+  background-color: #0400ff;
+}
+
+.containerGame {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  width: 80%;
+  border: 1px solid #000;
+  height: 20em;
+  overflow: scroll;
+  text-overflow: ellipsis;
+}
+
+.gameImage {
+  width: 90%;
+  height: 6em;
+  border: 1px solid #ff0000;
+}
+
+.gameCategories {
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.containerGame h3 {
+  margin: 0;
+}
+
+.textDivGame {
+  margin: 1em;
+  text-align: justify;
+  height: 6em;
+}
+
+.gamesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.categoriesContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .containerHome {
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: center;
 }
 
 .headline {
   margin: 0;
-  padding: 1rem;
   font-size: 5rem;
   line-height: 1.1;
   font-family: Raleway, sans-serif;
-  color: hsl(260, 70%, 40%);
+  display: flex;
+  justify-content: center;
+  color: #4e1fad;
 }
 
 .headline--text-stroke {
-  -webkit-text-stroke-color: hsl(260, 70%, 40%);
+  -webkit-text-stroke-color: #4e1fad;
   -webkit-text-stroke-width: 3px;
-  -webkit-text-fill-color: hsl(33, 100%, 96%);
+  -webkit-text-fill-color: #fff6eb;
 }
 
 .headline--background-clip {
   -webkit-text-stroke-color: transparent;
   -webkit-text-stroke-width: 6px;
-  -webkit-text-fill-color: hsl(33, 100%, 96%);
-  background-color: hsl(260, 70%, 40%);
+  -webkit-text-fill-color: #fff6eb;
+  background-color: #4e1fad;
   background-clip: text;
 }
 
 .headline--linear-gradient {
-  background-image: linear-gradient(120deg, hsl(260, 70%, 40%), hsl(0, 100%, 70%));
+  background-image: linear-gradient(120deg, #4e1fad, #ff6666);
 }
 
 /*# sourceMappingURL=style.css.map */
