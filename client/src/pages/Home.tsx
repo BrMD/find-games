@@ -3,8 +3,19 @@ import Categorie from "../components/Categorie";
 
 import "../css/style.css";
 import Game from "../components/Game";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [testeapi, settesteapi] = useState("");
+  useEffect(() => {
+    const callAPI = async () => {
+      const res = await fetch("http://localhost:3000/users");
+      const data = await res.text();
+      settesteapi(data);
+    };
+    callAPI();
+  }, []);
+
   return (
     <div className="containerHome">
       <div>
@@ -15,7 +26,9 @@ const Home = () => {
       <div className="categoriesContainer">
         {categories.map((categorie) => {
           return (
-            <Categorie color={categorie.color}>{categorie.name}</Categorie>
+            <Categorie key={categorie.name} color={categorie.color}>
+              {categorie.name}
+            </Categorie>
           );
         })}
       </div>
@@ -26,6 +39,7 @@ const Home = () => {
         <Game />
         <Game />
       </div>
+      <h1>{testeapi}</h1>
     </div>
   );
 };
